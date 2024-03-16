@@ -1,5 +1,4 @@
 const RecipeTable = ({ wantToCookItems, handleCookingItem, cookingItem }) => {
-  console.log(cookingItem);
   return (
     <div className="shadow-xl  m-2 rounded-xl">
       <div className="text-center p-4">

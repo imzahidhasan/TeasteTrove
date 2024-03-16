@@ -1,3 +1,5 @@
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+
 const Navbar = () => {
   return (
     <div className="container mx-auto">
@@ -58,6 +60,7 @@ const Navbar = () => {
         </div>
         <div class="navbar-end">
           <div className="hidden md:block">
+            
             <input
               type="text"
               placeholder="Search"

@@ -5,6 +5,8 @@ import RecipeTable from "./component/Recipe/RecipeTable";
 import Hero from "./component/navbar/hero-section/Hero";
 import Navbar from "./component/navbar/navbar/Navbar";
 import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -15,8 +17,25 @@ function App() {
   }, []);
   const [wantToCookTable, setWantToCookTable] = useState([]);
   const [cookingItem, setCookingItem] = useState([]);
+
+  const notify = () => {
+    toast.warn("Product already added.", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
+  };
   const handleWantToCook = (recipe) => {
-    setWantToCookTable([...wantToCookTable, recipe]);
+    const isExist = wantToCookTable.find((item) => item.id === recipe.id);
+    if (!isExist) {
+      setWantToCookTable([...wantToCookTable, recipe]);
+    } else {
+      notify();
+    }
   };
   const handleCookingItem = (item) => {
     setCookingItem([...cookingItem, item]);
@@ -48,6 +67,19 @@ function App() {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition:Bounce
+      />
     </>
   );
 }

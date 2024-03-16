@@ -1,7 +1,7 @@
 [
   {
     "id": "001",
-    "recipe_image": "chicken_teriyaki.jpg",
+    "recipe_image": "https://i.ibb.co/64R9svk/pexels-christian-dala-19160952.jpg",
     "recipe_name": "Chicken Teriyaki",
     "short_description": "A delicious Japanese dish featuring tender chicken cooked in a savory sauce.",
     "ingredients": [
@@ -15,7 +15,7 @@
   },
   {
     "id": "002",
-    "recipe_image": "spaghetti_bolognese.jpg",
+    "recipe_image": "https://i.ibb.co/ZTNmX2P/pexels-dhiraj-jain-12737810.jpg",
     "recipe_name": "Spaghetti Bolognese",
     "short_description": "Classic Italian pasta dish with a rich and flavorful meat sauce.",
     "ingredients": [
@@ -29,7 +29,7 @@
   },
   {
     "id": "003",
-    "recipe_image": "vegetable_stir_fry.jpg",
+    "recipe_image": "https://i.ibb.co/ngfPjPP/pexels-klaus-nielsen-6287527.jpg",
     "recipe_name": "Vegetable Stir Fry",
     "short_description": "A colorful and nutritious stir fry featuring an assortment of fresh vegetables.",
     "ingredients": [
@@ -43,7 +43,7 @@
   },
   {
     "id": "004",
-    "recipe_image": "grilled_salmon.jpg",
+    "recipe_image": "https://i.ibb.co/2KDzJ6g/pexels-horizon-content-3763847.jpg",
     "recipe_name": "Grilled Salmon",
     "short_description": "Healthy and flavorful grilled salmon fillets seasoned with herbs and lemon.",
     "ingredients": [
@@ -57,7 +57,7 @@
   },
   {
     "id": "005",
-    "recipe_image": "vegetarian_chili.jpg",
+    "recipe_image": "https://i.ibb.co/SmzXt6M/pexels-engin-akyurt-2347311.jpg",
     "recipe_name": "Vegetarian Chili",
     "short_description": "Hearty and satisfying chili packed with beans, vegetables, and spices.",
     "ingredients": [
@@ -71,7 +71,7 @@
   },
   {
     "id": "006",
-    "recipe_image": "mango_smoothie.jpg",
+    "recipe_image": "https://i.ibb.co/F35T0GP/pexels-wil-carranza-16724965.jpg",
     "recipe_name": "Mango Smoothie",
     "short_description": "Refreshing and tropical smoothie made with ripe mangoes and yogurt.",
     "ingredients": [
