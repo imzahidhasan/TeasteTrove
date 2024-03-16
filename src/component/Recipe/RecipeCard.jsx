@@ -1,4 +1,5 @@
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, handleWantToCook }) => {
+ 
   return (
     <div>
       <div className="card   bg-base-100 shadow-xl">
@@ -22,8 +23,8 @@ const RecipeCard = ({ recipe }) => {
           </div>
           <div>
             <ul className="list-disc ml-7 text-[#878787]">
-              {recipe.ingredients.map((item) => (
-                <li>{item}</li>
+              {recipe.ingredients.map((item,idx) => (
+                <li key={idx}>{item}</li>
               ))}
             </ul>
           </div>
@@ -36,7 +37,7 @@ const RecipeCard = ({ recipe }) => {
             </div>
           </div>
           <div className="card-actions p-4">
-            <button className="btn bg-[#0BE58A] text-[#150B2B] text-base rounded-full">
+            <button onClick={()=>handleWantToCook(recipe)} className="btn bg-[#0BE58A] text-[#150B2B] text-base rounded-full">
               Want to Cook
             </button>
           </div>
