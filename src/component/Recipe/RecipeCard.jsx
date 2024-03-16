@@ -24,7 +24,7 @@ const RecipeCard = ({ recipe, handleWantToCook }) => {
               ))}
             </ul>
           </div>
-          <div className="flex gap-16 items-center">
+          <div className="flex justify-between items-center">
             <div className="flex justify-center gap-1 items-center">
               <ClockIcon className="h-6 w-6" />
               <p>{recipe.preparing_time_minutes} minutes</p>

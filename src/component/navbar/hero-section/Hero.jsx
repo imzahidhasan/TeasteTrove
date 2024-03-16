@@ -14,10 +14,11 @@ const Hero = () => {
               Discover an exceptional cooking <br /> class tailored for you!
             </h1>
             <p className="mb-5">
-              Learn and Master Basic Programming, Data Structures, Algorithm,
-              OOP, Database and solve 500+ <br />
-              coding problems to become an exceptionally well world-class
-              Programmer.
+              "Embark on a culinary journey customized just for you. Our
+              world-class chefs will guide you through hands-on experiences,
+              <br />tailored to your skill level  and culinary aspirations. From
+              mastering basic techniques to exploring advanced <br /> flavors, discover
+              your culinary potential with us."
             </p>
             <div className="flex justify-center gap-6">
               <button className="btn bg-[#0BE58A] border-none text-base text-[#150B2B] rounded-full">
