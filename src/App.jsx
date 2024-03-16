@@ -48,8 +48,8 @@ function App() {
         <Navbar></Navbar>
         <Hero></Hero>
         <Heading></Heading>
-        <div className="grid grid-cols-12 gap-4 container mx-auto">
-          <div className="col-span-7 grid gap-4 grid-cols-2">
+        <div className="grid md:grid-cols-12 gap-4 container mx-auto">
+          <div className="md:col-span-7 grid gap-4 md:grid-cols-2">
             {recipes.map((recipe) => (
               <RecipeCard
                 key={recipe.id}
@@ -58,7 +58,7 @@ function App() {
               />
             ))}
           </div>
-          <div className="col-span-5">
+          <div className=" md:col-span-5">
             <RecipeTable
               handleCookingItem={handleCookingItem}
               wantToCookItems={wantToCookTable}
