@@ -1,5 +1,5 @@
-const RecipeTable = ({ wantToCookItems, handleCookingItem }) => {
-  // console.log(handleCookingItem);
+const RecipeTable = ({ wantToCookItems, handleCookingItem, cookingItem }) => {
+  console.log(cookingItem);
   return (
     <div className="shadow-xl  m-2 rounded-xl">
       <div className="text-center p-4">
@@ -22,12 +22,12 @@ const RecipeTable = ({ wantToCookItems, handleCookingItem }) => {
               <tr key={idx}>
                 <th>{idx + 1}</th>
                 <td>{item.recipe_name}</td>
-                <td>{item.calories}</td>
-                <td>{item.preparing_time_minutes}</td>
+                <td>{item.preparing_time_minutes} minutes</td>
+                <td>{item.calories} calories</td>
                 <td>
                   <button
                     onClick={() => handleCookingItem(item)}
-                    className="btn btn-primary"
+                    className="btn bg-[#0be58a] rounded-full"
                   >
                     Preparing
                   </button>
@@ -38,7 +38,9 @@ const RecipeTable = ({ wantToCookItems, handleCookingItem }) => {
         </table>
       </div>
       <div className="text-center p-4">
-        <h1>Currently cooking: 02</h1>
+        <h1 className="text-xl font-bold">
+          Currently Cooking: {cookingItem.length}
+        </h1>
       </div>
       <div className="overflow-x-auto">
         <table className="table">
@@ -51,19 +53,31 @@ const RecipeTable = ({ wantToCookItems, handleCookingItem }) => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th></th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr>
+            {cookingItem.map((item, idx) => (
+              <tr key={idx}>
+                <th>{idx + 1}</th>
+                <td>{item.recipe_name}</td>
+                <td>{item.preparing_time_minutes} minutes</td>
+                <td>{item.calories} calories</td>
+              </tr>
+            ))}
           </tbody>
           <tbody>
             <tr>
               <th></th>
               <td></td>
-              <td>Total time:200</td>
-              <td>Total calories:200</td>
+              <td>
+                Total time:{" "}
+                {cookingItem.reduce((accumulator, item) => {
+                  return (accumulator += item.preparing_time_minutes);
+                }, 0)}
+              </td>
+              <td>
+                Total calories:{" "}
+                {cookingItem.reduce((accumulator, item) => {
+                  return (accumulator += item.calories);
+                }, 0)}
+              </td>
             </tr>
           </tbody>
         </table>

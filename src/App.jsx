@@ -13,15 +13,14 @@ function App() {
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
-  
   const [wantToCookTable, setWantToCookTable] = useState([]);
+  const [cookingItem, setCookingItem] = useState([]);
   const handleWantToCook = (recipe) => {
     setWantToCookTable([...wantToCookTable, recipe]);
   };
-
   const handleCookingItem = (item) => {
-    let filteredItem=wantToCookTable.filter((recipe) => recipe.id != item.id)
-    console.log(filteredItem);
+    setCookingItem([...cookingItem, item]);
+    let filteredItem = wantToCookTable.filter((recipe) => recipe.id != item.id);
     setWantToCookTable([...filteredItem]);
   };
   return (
@@ -44,6 +43,7 @@ function App() {
             <RecipeTable
               handleCookingItem={handleCookingItem}
               wantToCookItems={wantToCookTable}
+              cookingItem={cookingItem}
             ></RecipeTable>
           </div>
         </div>
